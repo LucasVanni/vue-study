@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang='pt'>
+ <head>
+   <meta charset='UTF-8'>
+   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+   <title>Sum Exercise</title>
+   <script src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js'></script>
+ </head>
+ <body>
+   <div id="app">
+    <span v-text="n1" ></span>
+    <span>+</span>
+    <span v-text="n2" ></span>
+    <input type="number" v-model="soma" >
+    <span v-if=" soma == n1 + n2" >
+      Acertou
+    </span>
+    <span v-if="soma.length > 1 && soma != n1 + n2" >
+      Errou
+    </span>
+
+  </div>
+
+  <script src="script.js"></script>
+ </body>
+</html>
