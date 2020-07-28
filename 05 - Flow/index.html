@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang='pt'>
+ <head>
+   <meta charset='UTF-8'>
+   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+   <title>Flow</title>
+   <script src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js'></script>
+ </head>
+ <body>
+    <div id="app">
+        <!-- Primeiro forma de fazer
+        <div v-if="pais == 'Argentina'">
+          <p v-html="Argentina" ></p>
+          <p>América do Sul</p>
+        </div>
+
+        <div v-if="pais == 'Brasil'">
+          <p v-html="Brasil" ></p>
+          <p>América do Sul</p>
+        </div>
+
+        <div v-if="pais == 'China'">
+          <p v-html="China" ></p>
+          <p>Ásia</p>
+        </div>
+
+        <div v-if="pais == 'Inglaterra'">
+          <p v-html="Inglaterra" ></p>
+          <p>Europa</p>
+        </div>
+
+        <div v-if="pais == 'Estados_Unidos'">
+          <p v-html="Estados_Unidos" ></p>
+          <p>América do Norte</p>
+        </div> -->
+
+        <!-- Segundo modo de fazer 
+        <div>
+            <p v-html="(
+                pais == 'Argentina' ? Argentina :
+                pais == 'Brasil' ? Brasil :
+                pais == 'China' ? China :
+                pais == 'Inglaterra' ? Inglaterra :
+                pais == 'Estados_Unidos' ? Estados_Unidos : ''
+            )"></p>
+            <p v-html="(
+                pais == 'Argentina' ? 'América do Sul' :
+                pais == 'Brasil' ? 'América do Sul' :
+                pais == 'China' ? 'Ásia' :
+                pais == 'Inglaterra' ? 'Europa' :
+                pais == 'Estados_Unidos' ? 'América do Norte' : ''
+            )"></p>
+        </div> -->
+
+        <!-- Terceiro modo de fazer listagem -->
+        <div v-for="pais in list()">
+            <p v-html="pais.bandeira"></p>
+            <p>{{pais.continente}}</p>
+        </div>
+        
+    </div>
+  <script src="script.js"></script>
+ </body>
+</html>
